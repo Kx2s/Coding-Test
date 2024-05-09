@@ -5,24 +5,19 @@ def start() :
     rank = list(map(int,input().split()))
     
     if score == min(rank) and N==P:
-        print(-1)
-        return
+        return -1
     
-    cnt = -1
     for i in range(P) :
         if len(rank) == i :
-            cnt = i + 1
-            break
+            return i + 1
         
-        if score >= rank[i] :
-            cnt = i + 1
-            break
-    print(cnt)
-
+        elif score >= rank[i] :
+            return i + 1
+    return -1
 
 N, score, P = map(int, input().split())
 if N == 0 :
     print(1)
-else:
-    
-    start()
+
+else :
+    print(start())
