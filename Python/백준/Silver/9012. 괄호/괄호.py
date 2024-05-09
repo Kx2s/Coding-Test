@@ -12,11 +12,7 @@ def start (arr) :
                 return
             else :
                 stack.pop()
-
-    if len(stack) != 0 :
-        print("NO")
-    else :
-        print("YES")
+    print("YES" if len(stack) == 0 else "NO")
 
 
 for _ in range(int(input())) :
