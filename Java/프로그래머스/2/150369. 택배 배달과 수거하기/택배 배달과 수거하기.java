@@ -1,7 +1,5 @@
 import java.util.Stack;
 
-import static java.lang.System.exit;
-
 class Solution {
     int max = 0;
     long ans = 0;
