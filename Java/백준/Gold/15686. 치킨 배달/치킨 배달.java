@@ -44,9 +44,7 @@ public class Main {
         for (int i=idx; i<chicken.size(); i++) {
             select[dep] = i;
             selectChicken(i+1, dep+1);
-            select[dep] = -1;
         }
-        selectChicken(idx+1, dep);
     }
 
     public static void dist(){
