@@ -24,15 +24,13 @@ public class Main {
             Butter B2 = q.poll();
             int x = B2.x - B1.x -1;
             if (x < B1.h + B2.h) {
-                int time = 0;
-                while (x > 0){
-                    time++;
-                    x-= B1.h >= time? 1:0;
-                    x-= B2.h >= time? 1:0;
-                    if (x < 0)
-                        time--;
+                int min = Math.min(B1.h, B2.h);
+                if (x > min * 2){
+                    x -= min * 2;
+                    ans = Math.min(ans, x+min);
                 }
-                ans = Math.min(ans, time);
+                else
+                    ans = Math.min(ans, x/2);
             }
             B1 = B2;
         }
