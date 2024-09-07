@@ -38,7 +38,9 @@ public class Main {
 
             if (arr[i][c] != arr[i][b])
                 return '-';
+            else
+                return '+';
         }
-        return '+';
+        return 0;
     }
 }
